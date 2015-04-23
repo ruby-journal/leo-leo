@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>59BBCF9E-1611-4635-B23D-E54B7BF72791</string>
+	<key>IDESourceControlProjectName</key>
+	<string>mdcar-ios</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9C0F42C2429963804FBBB6FF307503A878EDD670</key>
+		<string>https://github.com/LeoTeam/mdcar.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>mdcar-ios/mdcar-ios.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9C0F42C2429963804FBBB6FF307503A878EDD670</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/LeoTeam/mdcar.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9C0F42C2429963804FBBB6FF307503A878EDD670</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9C0F42C2429963804FBBB6FF307503A878EDD670</string>
+			<key>IDESourceControlWCCName</key>
+			<string>mdcar</string>
+		</dict>
+	</array>
+</dict>
+</plist>

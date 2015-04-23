@@ -1,0 +1,11 @@
+source "https://github.com/CocoaPods/Specs.git"
+
+platform :ios, "7.0"
+# ignore all warnings from all pods
+inhibit_all_warnings!
+
+#link_with 'mdcar'
+
+pod "AFNetworking", "~> 2.5.2"
+pod "AFNetworkActivityLogger", "~> 2.0.3"
+pod "Overcoat", "~> 2.0.2"
