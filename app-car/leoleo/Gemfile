@@ -3,9 +3,20 @@ source 'https://rubygems.org'
 gem 'bundler'
 gem 'rake'
 
-gem 'lotusrb',       '0.3.0'
-gem 'lotus-model',   '~> 0.3'
+gem 'lotusrb',          '0.3.0'
+gem 'lotus-model',      '~> 0.3'
+gem 'lotus-view',       '~> 0.3'
+gem 'lotus-controller', '~> 0.3'
+gem 'lotus-helpers',    '~> 0.1.0'
+gem 'lotus-router',     '~> 0.3'
+gem 'lotus-model',      '~> 0.3'
+gem 'lotus-utils',      '~> 0.3'
+gem 'representative'
 
+group :development, :test do
+  gem 'sqlite3'
+  gem 'byebug', require: false
+end
 
 group :test do
   gem 'minitest'
