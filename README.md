@@ -7,10 +7,7 @@ A mobile app /w Lotus backend for User Management
 
 Pull code và chạy lệnh sau:
 
-```
-bundle install
-
-```
+`bundle install`
 
 **Bước 2:**
 
@@ -74,10 +71,10 @@ Vào folder v1 tạo folder config
 
 resources tự động ra 4 cái routes tương ứng với các action
 
-C: Create --> POST
+```C: Create --> POST
 R: Read --> GET
 U: Update --> PUT
-D: Delete --> DELETE
+D: Delete --> DELETE```
 
 use option `only` chỉ phục vụ action index --> Get all content 
 
@@ -125,6 +122,6 @@ Vào command line chạy lệnh sau:
 
 Nếu bạn bị đụng port với port của lotus thì bạn có thể dùng lệnh sau:
 
-`lotus serve -p 3000` Có thể thay 3000 bằng 1 con số bất kỳ
+`lotus serve -p 3000` Có thể thay 3000 bằng 1 con số bất 
 
 
