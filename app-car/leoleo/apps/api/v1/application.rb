@@ -1,5 +1,6 @@
 module ApiV1
   class Application < Lotus::Application
+
     configure do
       root __dir__
 
@@ -10,7 +11,7 @@ module ApiV1
 
       load_paths << [
         'controllers',
-        'presenters'
+        'presenters'  
       ]
 
       controller.prepare do

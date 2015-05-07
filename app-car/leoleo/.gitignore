@@ -1,2 +1,5 @@
 /db/leoleo_development
 /db/leoleo_test
+apps/web/_source/bower_components
+apps/web/_source/node_modules
+apps/web/_source/test

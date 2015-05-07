@@ -2,22 +2,16 @@
 
 /**
  * @ngdoc function
- * @name webAppMdcarApp.controller:MainCtrl
+ * @name webAppMdcarApp.controller:AboutCtrl
  * @description
- * # MainCtrl
+ * # AboutCtrl
  * Controller of the webAppMdcarApp
  */
 angular.module('webAppMdcarApp')
-  .controller('MainCtrl', function ($scope, Eservices) {
+  .controller('AboutCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
-
-    Eservices
-      .getUser()
-      .then(function(res){
-        console.log(res);
-      });
   });

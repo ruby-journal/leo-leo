@@ -16,6 +16,7 @@ gem 'representative'
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug', require: false
+  gem 'foreman'
 end
 
 group :test do

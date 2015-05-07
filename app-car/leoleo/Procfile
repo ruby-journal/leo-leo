@@ -1,0 +1,2 @@
+web: cd apps/web/_source && grunt watch
+api: bundle exec lotus server
