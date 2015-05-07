@@ -14,33 +14,34 @@ angular
     'ngCookies',
     'ngResource',
     'ngRoute',
+    'ui.router',
     'ngSanitize',
     'ngTouch',
     'restangular'
   ])
   .config(function (
-    $routeProvider,
-    $httpProvider,
+    $stateProvider,
+    $urlRouterProvider,
     RestangularProvider
   ) {
-    $routeProvider
-      .when('/', {
+    $stateProvider
+      .state('/', {
+        url: '/',
         templateUrl: 'views/partials/main.html',
         controller: 'MainCtrl'
       })
-      .when('/about', {
+      .state('/about', {
+        url: '/about',
         templateUrl: 'views/partials/about.html',
         controller: 'AboutCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
       });
+
+    $urlRouterProvider.otherwise("/");
 
     // Config Restangular
 
     RestangularProvider.setBaseUrl('http://localhost:2300/api/v1');
-    $httpProvider.defaults.useXDomain = true;
-    delete $httpProvider.defaults.headers.common['X-Requested-With'];
+
     RestangularProvider.setResponseExtractor(function(response, operation) {
       var newResponse = response;
       if (operation === 'getList') {

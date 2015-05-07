@@ -364,10 +364,6 @@ module.exports = function (grunt) {
 
     // Copies remaining files to places other tasks can use
     copy: {
-      main: {
-        src: 'app/*',
-        dest: '../public/'
-      },
       dist: {
         files: [{
           expand: true,
@@ -399,7 +395,14 @@ module.exports = function (grunt) {
         cwd: '<%= yeoman.app %>/styles',
         dest: '.tmp/styles/',
         src: '{,*/}*.css'
-      }
+      },
+      main: {
+        expand: true,
+        cwd: 'dist/',
+        src: '**',
+        dest: '../public/'
+      },
+
     },
 
     // Run some tasks in parallel to speed up the build process
