@@ -12,6 +12,7 @@ gem 'lotus-router',     '~> 0.3'
 gem 'lotus-model',      '~> 0.3'
 gem 'lotus-utils',      '~> 0.3'
 gem 'representative'
+gem 'compass'
 
 group :development, :test do
   gem 'sqlite3'
