@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>D5329C2E-4E92-44AE-BB36-2F46DD60C783</string>
+	<string>2E18357C-A1F6-4296-8ED0-04CF9344214F</string>
 	<key>IDESourceControlProjectName</key>
 	<string>mdcar-ios</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>9C0F42C2429963804FBBB6FF307503A878EDD670</key>
-		<string>https://github.com/LeoTeam/mdcar.git</string>
+		<key>919B1929290FE13FA26B4C84D5A138C665112088</key>
+		<string>github.com:ruby-journal/leo-leo.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>mdcar-ios/mdcar-ios.xcworkspace</string>
+	<string>app-car/mdcar-ios/mdcar-ios.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>9C0F42C2429963804FBBB6FF307503A878EDD670</key>
-		<string>../..</string>
+		<key>919B1929290FE13FA26B4C84D5A138C665112088</key>
+		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/LeoTeam/mdcar.git</string>
+	<string>github.com:ruby-journal/leo-leo.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>9C0F42C2429963804FBBB6FF307503A878EDD670</string>
+	<string>919B1929290FE13FA26B4C84D5A138C665112088</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>9C0F42C2429963804FBBB6FF307503A878EDD670</string>
+			<string>919B1929290FE13FA26B4C84D5A138C665112088</string>
 			<key>IDESourceControlWCCName</key>
-			<string>mdcar</string>
+			<string>leo-leo</string>
 		</dict>
 	</array>
 </dict>

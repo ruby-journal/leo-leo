@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E5AEB055C03CDA9B09C872F /* libPods-mdcar-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18FCC54D2D42649BBE15B576 /* libPods-mdcar-ios.a */; };
 		2C3BF8F71AE7BD62009D2EF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3BF8F61AE7BD62009D2EF4 /* main.m */; };
 		2C3BF8FA1AE7BD62009D2EF4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3BF8F91AE7BD62009D2EF4 /* AppDelegate.m */; };
 		2C3BF9031AE7BD62009D2EF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C3BF9011AE7BD62009D2EF4 /* Main.storyboard */; };
@@ -21,9 +22,10 @@
 		2C6FB4261AE936CA0072FA99 /* BBMDefaultRespone.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6FB4251AE936CA0072FA99 /* BBMDefaultRespone.m */; };
 		2C6FB4291AE936E30072FA99 /* BaseHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6FB4281AE936E30072FA99 /* BaseHTTPSessionManager.m */; };
 		2C6FB42C1AE9373B0072FA99 /* DefaultErrorResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6FB42B1AE9373B0072FA99 /* DefaultErrorResponse.m */; };
-		2C6FB42F1AE9377E0072FA99 /* Error.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6FB42E1AE9377E0072FA99 /* Error.m */; };
 		2C6FB4321AE938350072FA99 /* Meta.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C6FB4311AE938350072FA99 /* Meta.m */; };
 		BE9D904F534CC4462FD009DF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8302F28EDA4375E8FB4B110C /* libPods.a */; };
+		E5EC44B7DC99D3E4DDAEE56F /* libPods-mdcar-iosTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 14FBB1213FA5B7231753DEA5 /* libPods-mdcar-iosTests.a */; };
+		E8FB6808EB9CE6D9930C979F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8302F28EDA4375E8FB4B110C /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14FBB1213FA5B7231753DEA5 /* libPods-mdcar-iosTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mdcar-iosTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		18FCC54D2D42649BBE15B576 /* libPods-mdcar-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-mdcar-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		20C39B3178AE9CD6181FB92B /* Pods-mdcar-iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mdcar-iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mdcar-iosTests/Pods-mdcar-iosTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2C3BF8F11AE7BD62009D2EF4 /* mdcar-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mdcar-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C3BF8F51AE7BD62009D2EF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C3BF8F61AE7BD62009D2EF4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -63,11 +68,14 @@
 		2C6FB4281AE936E30072FA99 /* BaseHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseHTTPSessionManager.m; sourceTree = "<group>"; };
 		2C6FB42A1AE9373B0072FA99 /* DefaultErrorResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultErrorResponse.h; sourceTree = "<group>"; };
 		2C6FB42B1AE9373B0072FA99 /* DefaultErrorResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultErrorResponse.m; sourceTree = "<group>"; };
-		2C6FB42D1AE9377E0072FA99 /* Error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Error.h; sourceTree = "<group>"; };
-		2C6FB42E1AE9377E0072FA99 /* Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Error.m; sourceTree = "<group>"; };
 		2C6FB4301AE938350072FA99 /* Meta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Meta.h; sourceTree = "<group>"; };
 		2C6FB4311AE938350072FA99 /* Meta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Meta.m; sourceTree = "<group>"; };
+		2C88383D1AF3440E00C54C35 /* constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = constants.h; sourceTree = SOURCE_ROOT; };
+		2CDC61C21AFC9F2F00FC4668 /* README.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = README.h; sourceTree = "<group>"; };
+		657688F7D98C66B176578CFE /* Pods-mdcar-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mdcar-ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-mdcar-ios/Pods-mdcar-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		8302F28EDA4375E8FB4B110C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		92EA4D3FC451BEC755765E33 /* Pods-mdcar-iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mdcar-iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-mdcar-iosTests/Pods-mdcar-iosTests.release.xcconfig"; sourceTree = "<group>"; };
+		9835D64D91EEB2B2EF2A96D7 /* Pods-mdcar-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-mdcar-ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-mdcar-ios/Pods-mdcar-ios.release.xcconfig"; sourceTree = "<group>"; };
 		B11BA8AF007844AE1464EB46 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CB6F0EE7322F24EC07461100 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +86,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE9D904F534CC4462FD009DF /* libPods.a in Frameworks */,
+				1E5AEB055C03CDA9B09C872F /* libPods-mdcar-ios.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +94,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5EC44B7DC99D3E4DDAEE56F /* libPods-mdcar-iosTests.a in Frameworks */,
+				E8FB6808EB9CE6D9930C979F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +105,7 @@
 		2C3BF8E81AE7BD62009D2EF4 = {
 			isa = PBXGroup;
 			children = (
+				2CDC61C21AFC9F2F00FC4668 /* README.h */,
 				2C3BF8F31AE7BD62009D2EF4 /* mdcar-ios */,
 				2C3BF9101AE7BD62009D2EF4 /* mdcar-iosTests */,
 				2C3BF8F21AE7BD62009D2EF4 /* Products */,
@@ -114,6 +126,7 @@
 		2C3BF8F31AE7BD62009D2EF4 /* mdcar-ios */ = {
 			isa = PBXGroup;
 			children = (
+				2C88383B1AF306EB00C54C35 /* Configs */,
 				2C6FB4201AE9332B0072FA99 /* Networking */,
 				2C6FB4141AE914450072FA99 /* Model */,
 				2C6FB4131AE914390072FA99 /* Controller */,
@@ -193,12 +206,18 @@
 				2C6FB4281AE936E30072FA99 /* BaseHTTPSessionManager.m */,
 				2C6FB42A1AE9373B0072FA99 /* DefaultErrorResponse.h */,
 				2C6FB42B1AE9373B0072FA99 /* DefaultErrorResponse.m */,
-				2C6FB42D1AE9377E0072FA99 /* Error.h */,
-				2C6FB42E1AE9377E0072FA99 /* Error.m */,
 				2C6FB4301AE938350072FA99 /* Meta.h */,
 				2C6FB4311AE938350072FA99 /* Meta.m */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		2C88383B1AF306EB00C54C35 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				2C88383D1AF3440E00C54C35 /* constants.h */,
+			);
+			path = Configs;
 			sourceTree = "<group>";
 		};
 		A9B6FB8614573FAEDFB6A1C8 /* Pods */ = {
@@ -206,6 +225,10 @@
 			children = (
 				CB6F0EE7322F24EC07461100 /* Pods.debug.xcconfig */,
 				B11BA8AF007844AE1464EB46 /* Pods.release.xcconfig */,
+				20C39B3178AE9CD6181FB92B /* Pods-mdcar-iosTests.debug.xcconfig */,
+				92EA4D3FC451BEC755765E33 /* Pods-mdcar-iosTests.release.xcconfig */,
+				657688F7D98C66B176578CFE /* Pods-mdcar-ios.debug.xcconfig */,
+				9835D64D91EEB2B2EF2A96D7 /* Pods-mdcar-ios.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -214,6 +237,8 @@
 			isa = PBXGroup;
 			children = (
 				8302F28EDA4375E8FB4B110C /* libPods.a */,
+				18FCC54D2D42649BBE15B576 /* libPods-mdcar-ios.a */,
+				14FBB1213FA5B7231753DEA5 /* libPods-mdcar-iosTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -244,9 +269,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C3BF91A1AE7BD62009D2EF4 /* Build configuration list for PBXNativeTarget "mdcar-iosTests" */;
 			buildPhases = (
+				BA13E4C9B8E467B776EB326B /* Check Pods Manifest.lock */,
 				2C3BF9091AE7BD62009D2EF4 /* Sources */,
 				2C3BF90A1AE7BD62009D2EF4 /* Frameworks */,
 				2C3BF90B1AE7BD62009D2EF4 /* Resources */,
+				EE80AC9942C6D4DE3DE7EAAC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -329,7 +356,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mdcar-ios/Pods-mdcar-ios-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA13E4C9B8E467B776EB326B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EE80AC9942C6D4DE3DE7EAAC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-mdcar-iosTests/Pods-mdcar-iosTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FCD6D426B70FDF69066D70BE /* Check Pods Manifest.lock */ = {
@@ -356,7 +413,6 @@
 			files = (
 				2C6FB41F1AE933170072FA99 /* User.m in Sources */,
 				2C6FB42C1AE9373B0072FA99 /* DefaultErrorResponse.m in Sources */,
-				2C6FB42F1AE9377E0072FA99 /* Error.m in Sources */,
 				2C6FB4261AE936CA0072FA99 /* BBMDefaultRespone.m in Sources */,
 				2C6FB41B1AE916090072FA99 /* UserProfileTableViewCell.m in Sources */,
 				2C3BF8FA1AE7BD62009D2EF4 /* AppDelegate.m in Sources */,
@@ -440,10 +496,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Debug;
 		};
@@ -475,7 +532,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -484,7 +541,7 @@
 		};
 		2C3BF9181AE7BD62009D2EF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CB6F0EE7322F24EC07461100 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 657688F7D98C66B176578CFE /* Pods-mdcar-ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "mdcar-ios/Info.plist";
@@ -495,7 +552,7 @@
 		};
 		2C3BF9191AE7BD62009D2EF4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B11BA8AF007844AE1464EB46 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 9835D64D91EEB2B2EF2A96D7 /* Pods-mdcar-ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "mdcar-ios/Info.plist";
@@ -506,6 +563,7 @@
 		};
 		2C3BF91B1AE7BD62009D2EF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20C39B3178AE9CD6181FB92B /* Pods-mdcar-iosTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -525,6 +583,7 @@
 		};
 		2C3BF91C1AE7BD62009D2EF4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92EA4D3FC451BEC755765E33 /* Pods-mdcar-iosTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

@@ -7,7 +7,16 @@
 //
 
 #import "BaseHTTPSessionManager.h"
+#import "User.h"
 
 @interface UserClient : BaseHTTPSessionManager
+
+- (void)getResources:(void (^)(id resources, Meta *meta))success
+             failure:(void (^)(NSError *error))failure
+              offset:(NSNumber *)offset
+              offset:(NSNumber *)limit;
+
+- (void)getResources:(void (^)(id resources))success
+             failure:(void (^)(NSError *error))failure;
 
 @end
