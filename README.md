@@ -122,6 +122,6 @@ Vào command line chạy lệnh sau:
 
 Nếu bạn bị đụng port với port của lotus thì bạn có thể dùng lệnh sau:
 
-`lotus serve -p 3000` Có thể thay 3000 bằng 1 con số bất 
+`lotus serve -p 3000` Có thể thay 3000 bằng 1 con số bất kỳ
 
 

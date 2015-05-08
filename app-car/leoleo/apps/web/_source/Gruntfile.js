@@ -396,11 +396,21 @@ module.exports = function (grunt) {
         dest: '.tmp/styles/',
         src: '{,*/}*.css'
       },
-      main: {
-        expand: true,
-        cwd: 'dist/',
-        src: '**',
-        dest: '../public/'
+      publicweb: {
+        files: [{
+          expand: true,
+          cwd: 'dist/',
+          dest: '../public/',
+          src: [
+            '.htaccess'
+          ]
+        },
+        {
+          expand: true,
+          cwd: 'dist/',
+          src: '**',
+          dest: '../public/'
+        }]
       },
 
     },

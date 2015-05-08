@@ -1,3 +1,4 @@
 build: cd apps/web/_source && grunt build
-copy: cd apps/web/_source && grunt copy
-server: bundle exec lotus server && cd apps/web/_source && grunt watch 
+copy: cd apps/web/_source && grunt copy:publicweb
+frontendServer: cd apps/web/_source && grunt server
+apiServer: bundle exec lotus server
