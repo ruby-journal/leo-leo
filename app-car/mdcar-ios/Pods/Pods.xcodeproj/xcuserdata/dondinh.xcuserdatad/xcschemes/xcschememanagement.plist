@@ -4,37 +4,52 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-AFNetworkActivityLogger.xcscheme</key>
+		<key>Pods-mdcar-ios-AFNetworkActivityLogger.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-AFNetworking.xcscheme</key>
+		<key>Pods-mdcar-ios-AFNetworking.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-JSONModel.xcscheme</key>
+		<key>Pods-mdcar-ios-JSONModel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Mantle.xcscheme</key>
+		<key>Pods-mdcar-ios-Mantle.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Overcoat.xcscheme</key>
+		<key>Pods-mdcar-ios-OHHTTPStubs.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-SDWebImage.xcscheme</key>
+		<key>Pods-mdcar-ios-Overcoat.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods.xcscheme</key>
+		<key>Pods-mdcar-ios-SDWebImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-mdcar-ios.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+		</dict>
+		<key>Pods-mdcar-iosTests-Expecta.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-mdcar-iosTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,37 +57,52 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3ECFDD40DDA526A123E4F717</key>
+		<key>06E2EA0F898AC6D1B4D67625</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>50B052457F0DB3EC7289740F</key>
+		<key>1CEDA689AACD9A34FFF26074</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>68524AE21FDCC101D4953045</key>
+		<key>2F66B044BB44A731CABAEDFC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>81D94B2B066681123D362E6C</key>
+		<key>4F000C5C4175DA953040F7A5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9A0AFCDF8E212B389E24D215</key>
+		<key>929758946EFFC3552EB1FDB6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C0557E9DABE6300CF8B20CCD</key>
+		<key>9F328395B8C6B279F591FA68</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D1865ACB95E08ED0E907AB17</key>
+		<key>9FD24EDD9668E5EDA97B9FAA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A069060EB1C88D9BE06473CF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A1F31A1A36AAC7CF226BE44F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ECE02DE13242376E870D2DD3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -12,6 +12,8 @@
 {
   NSArray *thumbnails;
   NSString *reuseIdentifier;
+  UIActivityIndicatorView *spinner;
+  BOOL isFinishedLoading;
 }
 @end
 
@@ -19,8 +21,10 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  [self addActivityIndicator];
   [self initTableView];
   [self getUsersFromServer];
+  self.navigationItem.title = @"Lotus Demo";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,6 +33,27 @@
 
 #pragma *************************************************
 #pragma mark - UITableViewDelegate -
+
+- (void)addActivityIndicator;
+{
+  self.foregroundView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+  self.foregroundView.backgroundColor = [UIColor whiteColor];
+  spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+  spinner.tag = 1;
+  CGRect frame = spinner.frame;
+  frame.origin.x = self.view.frame.size.width / 2 - frame.size.width / 2;
+  frame.origin.y = self.view.frame.size.height / 2 - frame.size.height / 2;
+  spinner.frame = frame;
+  [spinner startAnimating];
+  [self.foregroundView addSubview:spinner];
+  [self.navigationController.view addSubview:self.foregroundView];
+}
+
+- (void)removeActivityIndicator;
+{
+  [spinner stopAnimating];
+  [self.foregroundView removeFromSuperview];
+}
 
 - (void)initTableView;
 {
@@ -39,10 +64,16 @@
 - (void)getUsersFromServer;
 {
   self.usersArray = [[NSMutableArray alloc] init];
-  self.usersArray = [@[@"Egg Benedict", @"Mushroom Risotto", @"Full Breakfast", @"Hamburger", @"Ham and Egg Sandwich", @"Creme Brelee", @"White Chocolate Donut", @"Starbucks Coffee", @"Vegetable Curry", @"Instant Noodle with Egg", @"Noodle with BBQ Pork", @"Japanese Noodle with Pork", @"Green Tea", @"Thai Shrimp Cake", @"Angry Birds Cake", @"Ham and Cheese Panini"] mutableCopy];
-  
+  [[UserClient sharedManager] getResources:^(id resources) {
+    [self removeActivityIndicator];
+    self.usersArray = resources;
+    isFinishedLoading = YES;
+    [self.tableView reloadData];
+  } failure:^(NSError *error) {
+    [self removeActivityIndicator];
+    // do somthing
+  }];
 }
-
 
 #pragma *************************************************
 #pragma mark - UITableViewDelegate -
@@ -60,10 +91,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath;
 {
+
  UserProfileTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
  
-//  cell.userAvatarImageView.image;
-  cell.userAboutLabel.text = [NSString stringWithFormat:@"%@\nEmail: user@gmail.com \nGender: female", [self.usersArray objectAtIndex:indexPath.row]];
+  User *user = [MTLJSONAdapter modelOfClass:User.class fromJSONDictionary:[self.usersArray objectAtIndex:indexPath.row] error:NULL];
+
+  cell.userAboutLabel.text = [NSString stringWithFormat:@"%@\nEmail: %@ \nGender: %@",user.name, user.email, user.gender];
   [cell.userAboutLabel sizeToFit];
   cell.userAboutLabel.lineBreakMode = NSLineBreakByCharWrapping;
  return cell;

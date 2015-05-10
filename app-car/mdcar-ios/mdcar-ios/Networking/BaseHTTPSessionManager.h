@@ -6,22 +6,23 @@
 //  Copyright (c) 2015 asnet. All rights reserved.
 //
 
-#import "OVCHTTPSessionManager.h"
+//#import "OVCHTTPSessionManager.h"
+#import "AFHTTPSessionManager.h"
 
 #import <Mantle/Mantle.h>
 
+#import <Overcoat/Overcoat.h>
+
 #import "Meta.h"
 
-@interface BaseHTTPSessionManager : OVCHTTPSessionManager
+@interface BaseHTTPSessionManager : AFHTTPSessionManager
 
 + (instancetype) sharedManager;
-
-//- (void)didSessionChangeStateNotification:(NSNotification *)notification;
 
 #pragma mark - Operation methods
 
 - (void)doGET:(NSString *)url
-      success:(void (^)(id obj, Meta *meta))success
+      success:(void (^)(id obj))success
       failure:(void (^)(NSError *error))failure;
 
 @end

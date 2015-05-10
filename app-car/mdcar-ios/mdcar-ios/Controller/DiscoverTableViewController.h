@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "UserProfileTableViewCell.h"
+#import "UserClient.h"
 
 @interface DiscoverTableViewController : UITableViewController<UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) NSMutableArray *usersArray;
+@property (strong, nonatomic) UIView *foregroundView;
 
 @end

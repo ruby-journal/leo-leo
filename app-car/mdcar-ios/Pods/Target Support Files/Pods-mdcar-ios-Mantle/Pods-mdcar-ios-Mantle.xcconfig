@@ -1,0 +1,1 @@
+PODS_MDCAR_IOS_MANTLE_OTHER_LDFLAGS = -framework "Foundation"

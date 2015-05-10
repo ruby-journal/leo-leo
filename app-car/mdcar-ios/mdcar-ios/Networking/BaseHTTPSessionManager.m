@@ -10,7 +10,7 @@
 #import "BBMDefaultRespone.h"
 #import "DefaultErrorResponse.h"
 
-#define APIURLString @"/api/v1/"
+#define APIURLString @"http://localhost:2300/api/v1/"
 
 @implementation BaseHTTPSessionManager
 
@@ -38,10 +38,24 @@ static NSString *username;
 
 + (instancetype)sharedManager;
 {
-  BaseHTTPSessionManager *sharedManager = [[self alloc] initWithBaseURL:[NSURL URLWithString:APIURLString]];
-  sharedManager.requestSerializer = [AFJSONRequestSerializer serializer];
-  [sharedManager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-  return sharedManager;
+  static BaseHTTPSessionManager *__sharedManager;
+  static dispatch_once_t onceToken;
+  dispatch_once(&onceToken, ^{
+    __sharedManager = [[self alloc] initWithBaseURL:[NSURL URLWithString:APIURLString]];
+  });
+  return __sharedManager;
+}
+
+- (instancetype)initWithBaseURL:(NSURL *)url;
+{
+  self = [super initWithBaseURL:url];
+  
+  if (self) {
+    self.requestSerializer = [AFJSONRequestSerializer serializer];
+    self.responseSerializer = [AFJSONResponseSerializer serializer];
+  }
+  
+  return self;
 }
 
 // Can override this method from sub class
@@ -67,7 +81,7 @@ static NSString *username;
 #pragma mark - ** Operation methods **
 
 - (void)doGET:(NSString *)url
-      success:(void (^)(id obj, Meta *meta))success
+      success:(void (^)(id obj))success
       failure:(void (^)(NSError *error))failure;
 {
   [self doGET:url parameters:nil success:success failure:failure];
@@ -75,17 +89,32 @@ static NSString *username;
 
 - (void)doGET:(NSString *)url
    parameters:(NSDictionary *)parameters
-      success:(void (^)(id obj, Meta *meta))success
+      success:(void (^)(id obj))success
       failure:(void (^)(NSError *error))failure;
 {
-//  [self setApiKeyForRequestSerializer:(AFJSONRequestSerializer *)self.requestSerializer];
-  [self GET:url parameters:parameters completion:^(BBMDefaultRespone *response, NSError *error) {
-    if (!error) {
-      success(response.result, response.meta);
-    } else {
-      failure(error);
-    }
+
+  
+  [self GET:url parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
+    success(responseObject);
+  } failure:^(NSURLSessionDataTask *task, NSError *error) {
+    failure(error);
   }];
+}
+
+
+- (void)didSessionChangeStateNotification:(NSNotification *)notification;
+{
+  NSDictionary *userInfo = notification.userInfo;
+  if (userInfo[@"apiKey"]) {
+    // Add api key to request
+    apiKey = userInfo[@"apiKey"];
+    username = userInfo[@"username"];
+  } else {
+    // Remove out api key from request
+    [self.requestSerializer setValue:nil forHTTPHeaderField:@"Authorization"];
+    apiKey = nil;
+    username = nil;
+  }
 }
 
 @end
