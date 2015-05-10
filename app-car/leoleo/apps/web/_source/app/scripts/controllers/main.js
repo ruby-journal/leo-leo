@@ -9,15 +9,9 @@
  */
 angular.module('webAppMdcarApp')
   .controller('MainCtrl', function ($scope, Eservices) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-
     Eservices
       .getUser()
       .then(function(res){
-        console.log(res);
+        $scope.users = res;
       });
   });
