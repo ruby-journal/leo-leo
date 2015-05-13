@@ -1,16 +1,14 @@
-<div class="jumbotron">
-  <div class="row">
-    <div ng-repeat="user in users track by $index" class="list-group">
-      <div class="media">
-        <div class="media-left media-middle">
-          <a class="avatar" href="#">
-            <img src="user.image_url" alt="">
-          </a>
-        </div>
-        <div class="media-body">
-          <p>{{user.name}}</p>
-          <p>{{user.about}}</p>
-        </div>
+<div class="jumbotron wrap-content">
+  <div ng-repeat="user in users track by $index" class="list-group">
+    <div class="media">
+      <div class="media-left">
+        <a class="avatar" href="#">
+          <img ng-src="{{user.image_url}}" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <p>{{user.name}}</p>
+        <p>{{user.about}}</p>
       </div>
     </div>
   </div>
