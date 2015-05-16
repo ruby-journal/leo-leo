@@ -114,12 +114,96 @@ Thêm vào require_relative '../apps/api/v1/application'
 Ngoài ra thêm mount ApiV1::Application, at: '/api/v1' vào Lotus::Container.configure
 
 
+## Cài đặt front end
+
+###Bước 1
+
+Vào folder Web create _source
+
+Setup với yeoman enviroment vào trang http://yeoman.io/learning/index.html để xem thêm chi tiết
+
+Chúng ta sẽ sử dụng generator-angular
+
+###Bước 2
+
+Vào _source/Gruntfile.js
+
+Ở task 'copy'. Bổ sung publicweb để thực hiện copy.
+
+```
+copy: {
+  publicweb: {
+    files: [{
+      expand: true,
+      cwd: 'dist/',
+      dest: '../public/',
+      src: [
+        '.htaccess'
+      ]
+    },
+    {
+      expand: true,
+      cwd: 'dist/',
+      src: '**',
+      dest: '../public/'
+    }]
+  },
+
+}
+```
+
+Ở task 'build'. Bổ sung thêm copy `copy:publicweb`
+ý nghĩa của nó là khi chúng ta build _source thì nó sẽ copy content của folder dist sang folder public
+
+```
+grunt.registerTask('build', [
+    'copy:publicweb'
+  ]);
+```
+
+###Bước 3:
+
+Install foreman để có thể quản lý quá trình run của mỗi lệnh
+
+```
+gem install foreman
+bundle install
+```
+
+###Bước 4
+
+Tạo 1 file Procfile
+
+```
+# build frontend code
+build: cd apps/web/_source && grunt build
+
+# run code frontend server làm ở frontend
+
+frontend_server: cd apps/web/_source && grunt server
+
+# run code kết hợp cả api trả về của backend, kết hợp với frontend
+api_server: bundle exec lotus server
+
+```
+
 ##Hoàn thành
 
 Vào command line chạy lệnh sau:
 
-lotus serve
+*Chỉ chạy server ở frontend thì:*
 
-Nếu bạn bị đụng port với port của lotus thì bạn có thể dùng lệnh sau:
+`foreman start frontend_server`
+và sau đó run `http://localhost:9000/` ở browser
 
-lotus serve -p 3000 Có thể thay 3000 bằng 1 con số bất kỳ
+*Kết hợp giữa backend và frontend thì:*
+
+`foreman start bend_server`
+và sau đó run `http://localhost:2300/` ở browser
+
+
+**Chú ý**
+
+Nếu bạn bị đụng port với port của lotus thì bạn có thể dùng lệnh sau ở file Procfile
+
+`lotus serve -p 3000` Có thể thay 3000 bằng 1 con số bất kỳ
