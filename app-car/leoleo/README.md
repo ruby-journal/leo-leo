@@ -118,7 +118,7 @@ Ngoài ra thêm mount ApiV1::Application, at: '/api/v1' vào Lotus::Container.co
 
 ###Bước 1
 
-Vào folder Web create _source
+Vào folder Web create _source (lotus generator app _source with lotus v0.3.1)
 
 Setup với yeoman enviroment vào trang http://yeoman.io/learning/index.html để xem thêm chi tiết
 
