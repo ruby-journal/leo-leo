@@ -1,3 +1,4 @@
+install_frontend: ./install.sh
 build: cd apps/web/_source && grunt build
 frontend_server: cd apps/web/_source && grunt server
 api_server: bundle exec lotus server
