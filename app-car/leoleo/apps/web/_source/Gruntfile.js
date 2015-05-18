@@ -396,7 +396,7 @@ module.exports = function (grunt) {
         dest: '.tmp/styles/',
         src: '{,*/}*.css'
       },
-      publicweb: {
+      public_web: {
         files: [{
           expand: true,
           cwd: 'dist/',
@@ -484,7 +484,7 @@ module.exports = function (grunt) {
     'filerev',
     'usemin',
     'htmlmin',
-    'copy:publicweb',
+    'copy:public_web',
   ]);
 
   grunt.registerTask('default', [
